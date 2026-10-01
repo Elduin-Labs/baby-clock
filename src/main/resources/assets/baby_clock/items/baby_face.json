@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "baby_clock:item/baby_face"
+  }
+}

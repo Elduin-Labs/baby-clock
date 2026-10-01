@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [ { "condition": "minecraft:survives_explosion" } ],
+      "entries": [ { "type": "minecraft:item", "name": "baby_clock:baby_clock" } ]
+    }
+  ],
+  "random_sequence": "baby_clock:blocks/baby_clock"
+}

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "baby_clock:block/baby_clock_side",
+    "face": "baby_clock:block/baby_clock_face",
+    "side": "baby_clock:block/baby_clock_side",
+    "bell": "baby_clock:block/baby_clock_bell"
+  },
+  "elements": [
+    {
+      "from": [4, 0, 6],
+      "to": [12, 8, 11],
+      "faces": {
+        "north": { "uv": [4, 4, 12, 12], "texture": "#face" },
+        "south": { "uv": [4, 4, 12, 12], "texture": "#side" },
+        "east":  { "uv": [5, 4, 10, 12], "texture": "#side" },
+        "west":  { "uv": [5, 4, 10, 12], "texture": "#side" },
+        "up":    { "uv": [4, 6, 12, 11], "texture": "#side" },
+        "down":  { "uv": [4, 6, 12, 11], "texture": "#side", "cullface": "down" }
+      }
+    },
+    {
+      "from": [4, 8, 7.5],
+      "to": [7, 10, 9.5],
+      "faces": {
+        "north": { "uv": [0, 0, 3, 2], "texture": "#bell" },
+        "south": { "uv": [0, 0, 3, 2], "texture": "#bell" },
+        "east":  { "uv": [0, 0, 2, 2], "texture": "#bell" },
+        "west":  { "uv": [0, 0, 2, 2], "texture": "#bell" },
+        "up":    { "uv": [0, 0, 3, 2], "texture": "#bell" }
+      }
+    },
+    {
+      "from": [9, 8, 7.5],
+      "to": [12, 10, 9.5],
+      "faces": {
+        "north": { "uv": [0, 0, 3, 2], "texture": "#bell" },
+        "south": { "uv": [0, 0, 3, 2], "texture": "#bell" },
+        "east":  { "uv": [0, 0, 2, 2], "texture": "#bell" },
+        "west":  { "uv": [0, 0, 2, 2], "texture": "#bell" },
+        "up":    { "uv": [0, 0, 3, 2], "texture": "#bell" }
+      }
+    },
+    {
+      "from": [7.5, 8, 8],
+      "to": [8.5, 9.5, 9],
+      "faces": {
+        "north": { "uv": [0, 0, 1, 1.5], "texture": "#bell" },
+        "south": { "uv": [0, 0, 1, 1.5], "texture": "#bell" },
+        "east":  { "uv": [0, 0, 1, 1.5], "texture": "#bell" },
+        "west":  { "uv": [0, 0, 1, 1.5], "texture": "#bell" },
+        "up":    { "uv": [0, 0, 1, 1], "texture": "#bell" }
+      }
+    }
+  ],
+  "display": {
+    "gui": { "rotation": [30, 225, 0], "translation": [0, 2, 0], "scale": [1.0, 1.0, 1.0] },
+    "ground": { "rotation": [0, 0, 0], "translation": [0, 3, 0], "scale": [0.5, 0.5, 0.5] },
+    "fixed": { "rotation": [0, 180, 0], "translation": [0, 0, 0], "scale": [0.9, 0.9, 0.9] }
+  }
+}

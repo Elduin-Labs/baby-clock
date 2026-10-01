@@ -1,5 +1,7 @@
 package com.elduin.baby_clock;
 
+import com.elduin.baby_clock.block.ModBlocks;
+import com.elduin.baby_clock.client.BabyClockClient;
 import com.elduin.baby_clock.platform.Platform;
 
 import net.minecraft.resources.Identifier;
@@ -21,11 +23,14 @@ public class BabyClock {
 	public static void onInitialize() {
 		LOGGER.info("Initializing {} on {}", MOD_ID, BabyClock.xplat().loader());
 		LOGGER.debug("{}: { version: {}; friendly_name: {} }", MOD_ID, MOD_VERSION, MOD_FRIENDLY_NAME);
+		ModBlocks.init();
+		Baby.register();
 	}
 
 	public static void onInitializeClient() {
 		LOGGER.info("Initializing {} Client on {}", MOD_ID, BabyClock.xplat().loader());
 		LOGGER.debug("{}: { version: {}; friendly_name: {} }", MOD_ID, MOD_VERSION, MOD_FRIENDLY_NAME);
+		BabyClockClient.register();
 	}
 
 	static Platform xplat() {

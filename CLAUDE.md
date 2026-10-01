@@ -16,6 +16,26 @@ work with Elduin live in `~/.claude/CLAUDE.md`.
     primary version   1.21.11               (the one he plays)
     java              21 for 1.21.x, 25 for 26.x — Gradle picks this per version
 
+## How it works
+
+- Being a baby is a permanent `ADD_MULTIPLIED_TOTAL` modifier (`baby_clock:baby`,
+  -0.5) on the player's `minecraft:scale` attribute, so it saves with the
+  player and every client sees it. `Baby` changes it in 8 steps, 10 game ticks
+  apart, with a note-block "tick"/"tock" each step.
+- `BabyClockBlock.setPlacedBy` shrinks whoever placed it; right-clicking the
+  clock toggles (baby -> grown-up, otherwise -> baby). It faces the placer.
+- While fully a baby, `Baby` sends drool particles from the mouth every 4 ticks.
+- The open mouth and the drip on the chin are `client/BabyMouthLayer`, built
+  like vanilla's deadmau5 ears: a player model cleared down to two flat cards
+  on the head. It draws on any player whose render-state `scale` is <= 0.6.
+- The **Baby** creative tab's icon is `baby_face`, an item that exists only for
+  that picture (in no tab, no recipe). Recipe: clock + milk bucket.
+- Every texture and the icon are drawn by `tools/textures.py` (no Mojang art).
+- Version differences: Fabric's creative tab builder (`Compat`), and in
+  `BabyClockClient` the model-layer registry and the render-layer callback
+  (`LivingEntityFeatureRendererRegistrationCallback` in 1.21.11,
+  `LivingEntityRenderLayerRegistrationCallback` in 26.2).
+
 The mod id is baked into save files. Once a world has been played with this mod,
 **changing the mod id breaks that world.** Rename the display name freely;
 never rename the mod id.

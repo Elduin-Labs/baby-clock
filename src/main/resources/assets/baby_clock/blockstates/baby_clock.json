@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "baby_clock:block/baby_clock" },
+    "facing=east":  { "model": "baby_clock:block/baby_clock", "y": 90 },
+    "facing=south": { "model": "baby_clock:block/baby_clock", "y": 180 },
+    "facing=west":  { "model": "baby_clock:block/baby_clock", "y": 270 }
+  }
+}

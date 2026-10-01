@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [ "minecraft:clock", "minecraft:milk_bucket" ],
+  "result": { "id": "baby_clock:baby_clock", "count": 1 }
+}
